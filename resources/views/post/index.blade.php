@@ -7,6 +7,10 @@
     <title>Posts</title>
 </head>
 <body>
-    
+    <ol>
+    @foreach ($posts as $post)
+        <li>{{$post->text}}</li>
+    @endforeach
+    </ol>
 </body>
 </html>

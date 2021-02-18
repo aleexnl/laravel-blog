@@ -41,7 +41,8 @@ class PostController extends Controller
         $post->text = $request->post_text;
         $post->save();
 
-        return view('post.index');
+        $posts = Post::all();
+        return view('post.index', ['posts' => $posts]);
     }
 
     /**
